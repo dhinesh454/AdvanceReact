@@ -3,6 +3,7 @@ import './App.css';
 import ExpenseItem from './components/Expenses/ExpenseItem';
 import Expenses from './components/Expenses/Expenses';
 import ExpenseDate from './components/Expenses/ExpenseDate';
+import NewExpense from './components/NewExpense/NewExpenses'
 
 
 const App =() =>{
@@ -31,7 +32,7 @@ const App =() =>{
 
     <div className="App">
     <h1>Expense Items</h1>
-
+   <NewExpense/>
     <Expenses items={expenses}/>
 
 
