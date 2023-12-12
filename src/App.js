@@ -16,7 +16,11 @@ const App =() =>{
   ];
 
 
+const addExpenseHandler = (expense) =>{
+  console.log('APP.js')
 
+  console.log(expenses)
+}
 
 
 // return (
@@ -32,13 +36,8 @@ const App =() =>{
 
     <div className="App">
     <h1>Expense Items</h1>
-   <NewExpense/>
-    <Expenses items={expenses}/>
-
-
-
-      
-     
+   <NewExpense  onAddExpense={addExpenseHandler}/>
+    <Expenses items={expenses}/> 
     </div>
   );
 }

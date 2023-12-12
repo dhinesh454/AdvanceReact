@@ -3,7 +3,7 @@ import React,{useState}from 'react';
 import './ExpenseForm.css';
 
 
-function ExpenseForm(){
+function ExpenseForm(props){
 
    const [enteredtitle , setEnteredTitle]=useState('');
   const [enteredamount , setEnteredAmount]=useState('');
@@ -57,6 +57,10 @@ amount:enteredamount,
 date:new Date(entereddate)
 }
 console.log(obj);
+setEnteredTitle('');
+setEnteredAmount('');
+setEnteredDate('');
+props.onSaveExpenseDate(obj);
 
 }
 
@@ -66,17 +70,23 @@ console.log(obj);
     <div className='new-expense__controls'>
       <div className='new-expense__control'>
       <label>Title</label>
-      <input type='text' onChange={titleOnchanged}/>
+      <input type='text'
+      value={enteredtitle}
+       onChange={titleOnchanged}/>
       </div>
 
       <div className='new-expense__control'>
       <label>Amount</label>
-      <input type='number' onChange={amountOnchanged}/>
+      <input type='number' 
+      value={enteredamount}
+      onChange={amountOnchanged}/>
       </div>
 
       <div className='new-expense__control'>
       <label>Date</label>
-      <input type='date'  onChange={dateOnchanged}/>
+      <input type='date'  
+      value={entereddate}
+      onChange={dateOnchanged}/>
       </div>
 
     </div>
