@@ -11,7 +11,7 @@ function NewExpenses(props){
         };
         count++;
         console.log(expenseDate)
-         props.addExpenseHandler(); 
+         props.onAddExpense(expenseDate); 
     }
 
 
