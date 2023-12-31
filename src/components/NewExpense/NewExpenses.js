@@ -7,9 +7,9 @@ function NewExpenses(props){
         let count=1;
         const expenseDate ={
            ...enteredExpenseItem,
-           id:count+Math.random().toString()
+           id:Math.random().toString()
         };
-        count++;
+     
         console.log(expenseDate)
          props.onAddExpense(expenseDate); 
     }
