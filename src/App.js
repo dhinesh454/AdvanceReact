@@ -3,7 +3,8 @@ import './App.css';
 import ExpenseItem from './components/Expenses/ExpenseItem';
 import Expenses from './components/Expenses/Expenses';
 import ExpenseDate from './components/Expenses/ExpenseDate';
-import NewExpense from './components/NewExpense/NewExpenses'
+import NewExpense from './components/NewExpense/NewExpenses';
+import ExpensesChart from './components/Expenses/ExpensesChart';
 
 
 const DUMMY_EXPENSES=[
@@ -48,6 +49,7 @@ const addExpenseHandler = (expense) =>{
     <div className="App">
     <h1>Expense Items</h1>
    <NewExpense  onAddExpense={addExpenseHandler}/>
+  
     <Expenses items={expenses}/> 
     </div>
   );
